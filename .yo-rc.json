@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "gitCompany": "",
+    "baseName": "chakabackend",
+    "packageName": "io.chaka.application",
+    "packageFolder": "io/chaka/application",
+    "serverPort": 8080,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "gradle",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": false,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "6.0.0",
+    "jwtSecretKey": "Y2IwNDM5YWIyNGYyNjkwNzVkZjBlYTcwYTVkMzc2ZjdiMTY3NmUzMDgyMjdlZDEzYzI1NWU0NzBmOWU1MjFjODY3NTQ2Y2NlZTBkZDhjMGQ4MTJjYjdmYjYxNGY2NmU3YmM2ZTg5NGExZWE5YjgyYmEwZTM3MjZkYTEyNzU5NGY=",
+    "clientTheme": "none",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": []
+  },
+  "git-provider": "GitHub",
+  "git-company": "dardanxhymshiti",
+  "repository-name": "chaka-backend"
+}
