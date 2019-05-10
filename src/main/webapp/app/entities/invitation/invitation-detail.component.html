@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="invitation">
+            <h2><span>Invitation</span> {{invitation.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Invitation ID</span></dt>
+                <dd>
+                    <span>{{invitation.invitationID}}</span>
+                </dd>
+                <dt><span>User ID</span></dt>
+                <dd>
+                    <span>{{invitation.userID}}</span>
+                </dd>
+                <dt><span>Email</span></dt>
+                <dd>
+                    <span>{{invitation.email}}</span>
+                </dd>
+                <dt><span>Status</span></dt>
+                <dd>
+                    <span>{{invitation.status}}</span>
+                </dd>
+                <dt><span>Chaka User</span></dt>
+                <dd>
+                    <div *ngIf="invitation.chakaUser">
+                        <a [routerLink]="['/chaka-user', invitation.chakaUser?.id, 'view']">{{invitation.chakaUser?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/invitation', invitation.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

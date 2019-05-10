@@ -1,0 +1,39 @@
+{
+    "name": "Invitation",
+    "fields": [
+        {
+            "fieldName": "invitationID",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userID",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "chakaUser",
+            "otherEntityName": "chakaUser",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190510095809",
+    "javadoc": "Task entity.\n@author The JHipster team.",
+    "entityTableName": "invitation",
+    "dto": "no",
+    "pagination": "pager",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

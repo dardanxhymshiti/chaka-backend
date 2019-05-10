@@ -1,0 +1,39 @@
+{
+    "name": "UserAccount",
+    "fields": [
+        {
+            "fieldName": "accountID",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userID",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bilane",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "bonus",
+            "otherEntityRelationshipName": "userAccount",
+            "relationshipName": "userID"
+        }
+    ],
+    "changelogDate": "20190510095807",
+    "javadoc": "not an ignored comment",
+    "entityTableName": "user_account",
+    "dto": "no",
+    "pagination": "pager",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

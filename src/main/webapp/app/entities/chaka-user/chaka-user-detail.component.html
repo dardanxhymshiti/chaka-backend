@@ -1,0 +1,85 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="chakaUser">
+            <h2><span>Chaka User</span> {{chakaUser.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>User ID</span></dt>
+                <dd>
+                    <span>{{chakaUser.userID}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{chakaUser.name}}</span>
+                </dd>
+                <dt><span>Surname</span></dt>
+                <dd>
+                    <span>{{chakaUser.surname}}</span>
+                </dd>
+                <dt><span>Birthday</span></dt>
+                <dd>
+                    <span>{{chakaUser.birthday}}</span>
+                </dd>
+                <dt><span>Username</span></dt>
+                <dd>
+                    <span>{{chakaUser.username}}</span>
+                </dd>
+                <dt><span>Password</span></dt>
+                <dd>
+                    <span>{{chakaUser.password}}</span>
+                </dd>
+                <dt><span>Country</span></dt>
+                <dd>
+                    <span>{{chakaUser.country}}</span>
+                </dd>
+                <dt><span>City</span></dt>
+                <dd>
+                    <span>{{chakaUser.city}}</span>
+                </dd>
+                <dt><span>Zip</span></dt>
+                <dd>
+                    <span>{{chakaUser.zip}}</span>
+                </dd>
+                <dt><span>Street</span></dt>
+                <dd>
+                    <span>{{chakaUser.street}}</span>
+                </dd>
+                <dt><span>Email</span></dt>
+                <dd>
+                    <span>{{chakaUser.email}}</span>
+                </dd>
+                <dt><span>Phone</span></dt>
+                <dd>
+                    <span>{{chakaUser.phone}}</span>
+                </dd>
+                <dt><span>Language</span></dt>
+                <dd>
+                    <span>{{chakaUser.language}}</span>
+                </dd>
+                <dt><span>Data Of Registration</span></dt>
+                <dd>
+                    <span>{{chakaUser.dataOfRegistration}}</span>
+                </dd>
+                <dt><span>User ID</span></dt>
+                <dd>
+                    <div *ngIf="chakaUser.userID">
+                        <a [routerLink]="['/user-account', chakaUser.userID?.id, 'view']">{{chakaUser.userID?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/chaka-user', chakaUser.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
