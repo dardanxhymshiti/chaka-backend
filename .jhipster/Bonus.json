@@ -1,0 +1,34 @@
+{
+    "name": "Bonus",
+    "fields": [
+        {
+            "fieldName": "bonusID",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userID",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "coins",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "userAccount",
+            "otherEntityName": "userAccount",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190510095808",
+    "entityTableName": "bonus",
+    "dto": "no",
+    "pagination": "pager",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

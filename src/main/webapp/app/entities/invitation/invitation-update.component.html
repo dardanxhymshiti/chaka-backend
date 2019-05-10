@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-invitation-heading">Create or edit a Invitation</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!invitation.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_invitationID">Invitation ID</label>
+                    <input type="text" class="form-control" name="invitationID" id="field_invitationID"
+                           formControlName="invitationID"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_userID">User ID</label>
+                    <input type="text" class="form-control" name="userID" id="field_userID"
+                           formControlName="userID"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                           formControlName="email"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_status">Status</label>
+                    <input type="text" class="form-control" name="status" id="field_status"
+                           formControlName="status"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chakaUser">Chaka User</label>
+                    <select class="form-control" id="field_chakaUser" name="chakaUser" formControlName="chakaUser">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="chakaUserOption.id === editForm.get('chakaUser').value?.id ? editForm.get('chakaUser').value : chakaUserOption" *ngFor="let chakaUserOption of chakausers; trackBy: trackChakaUserById">{{chakaUserOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

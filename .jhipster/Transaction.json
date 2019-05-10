@@ -1,0 +1,42 @@
+{
+    "name": "Transaction",
+    "fields": [
+        {
+            "fieldName": "transactionID",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userID",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "total",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "chakaUser",
+            "otherEntityName": "chakaUser",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190510095806",
+    "entityTableName": "transaction",
+    "dto": "no",
+    "pagination": "pager",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
