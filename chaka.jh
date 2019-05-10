@@ -1,0 +1,84 @@
+entity User {
+	userID String,
+    name String,
+    surname String,
+    birthday Instant,
+    username String,
+    password String,
+    country String,
+    city String,
+    zip String,
+    street String,
+    email String,
+    phone String,
+    language String,
+    dataOfRegistration Instant
+    
+    
+}
+
+entity Transaction {
+	transactionID String,
+    userID String,
+    description String,
+    type String,
+    total String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity UserAccount {
+	accountID String,
+	userID String,
+	bilane Double,
+	Status String
+}
+
+entity Bonus {
+	bonusID String,
+    userID String,
+    coins Double
+}
+
+/**
+ * Task entity.
+ * @author The JHipster team.
+ */
+entity Invitation {
+	invitationID String,
+	userID String,
+    email String,
+    status String
+}
+
+
+relationship OneToMany {
+	User{userID} to Transaction
+}
+
+relationship OneToOne {
+User {userID} to UserAccount 
+}
+
+relationship OneToMany {
+UserAccount{userID} to Bonus
+}
+
+relationship OneToMany {
+User{userID} to Invitation
+}
+
+
+
+enum AccountStatus {
+    BLACKLISTED, FROZEN, OK, DELETED
+}
+
+enum InvitationStatus {
+	WAITING, CONFIRMED
+}
+
+
+service all with serviceImpl
+paginate * with pagination
+paginate * with pager
